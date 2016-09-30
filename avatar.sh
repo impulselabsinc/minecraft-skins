@@ -1,6 +1,15 @@
 #!/bin/bash
-prompt="Please select a file:"
-#options=( $(find . -regex ".*\.\(png\)" -maxdepth 2 -type f -not -name '.*' -print0 | xargs -0) )
+
+if [[ $USER != "root" ]]; then 
+	  echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+		echo ""
+		echo "This script must be run as a super user. Did you forget to use sudo?" 
+		echo -e "\nUsage: \nsudo $0 \n"
+		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+		exit 1
+	fi 
+
+prompt="Type in the number ext to the file you want to use:"
 
 options=( $(find . -regex ".*\.\(png\)" -maxdepth 2 -print0 | xargs -0) )
 
