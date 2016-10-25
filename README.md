@@ -19,7 +19,7 @@ sudo cp ~/impulselabs/minecraft-skins/girl/femalepirate.png char.png
 #or
 sudo cp ~/impulselabs/minecraft-skins/boy/spiderman.png char.png
 
-
+# ~~~~ or use avatar.sh as described below ~~~~
 
 # open a console session
 # 'cd' lets you change to the folder or directory you want
