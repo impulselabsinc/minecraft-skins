@@ -9,7 +9,7 @@ if [[ $USER != "root" ]]; then
 		exit 1
 	fi 
 
-prompt="Type in the number ext to the file you want to use:"
+prompt="Type in the number next to the file you want to use:"
 
 options=( $(find . -regex ".*\.\(png\)" -maxdepth 2 -print0 | xargs -0) )
 
